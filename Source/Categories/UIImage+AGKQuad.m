@@ -42,7 +42,7 @@
     CGRect destinationRect = (CGRect){CGPointZero, destinationSize};
 
     AGKQuad destinationQuad = AGKQuadMakeWithCGRect(destinationRect);
-    CATransform3D transform = [self generatePerspectiveTransformMatrixFromQuad:quad toQuad:destinationQuad];
+    CATransform3D transform = [self generatePerspectiveTransformMatrixFromQuad:destinationQuad toQuad:quad];
 
     UIImage *correctedImage = [self imageWithTransform:transform anchorPoint:CGPointZero];
     UIImage *resultImage = [correctedImage imageByCroppingToRect:destinationRect];
